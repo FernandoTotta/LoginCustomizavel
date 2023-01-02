@@ -13,6 +13,7 @@
 		ED0422D22963074B001BC55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0422D02963074B001BC55C /* Main.storyboard */; };
 		ED0422D42963074C001BC55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED0422D32963074C001BC55C /* Assets.xcassets */; };
 		ED0422D72963074C001BC55C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0422D52963074C001BC55C /* LaunchScreen.storyboard */; };
+		ED0422DF2963213C001BC55C /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0422DE2963213C001BC55C /* InformationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ED0422D32963074C001BC55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED0422D62963074C001BC55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED0422D82963074C001BC55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED0422DE2963213C001BC55C /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				ED0422CA2963074B001BC55C /* AppDelegate.swift */,
 				ED0422CC2963074B001BC55C /* SceneDelegate.swift */,
 				ED0422CE2963074B001BC55C /* ViewController.swift */,
+				ED0422DE2963213C001BC55C /* InformationViewController.swift */,
 				ED0422D02963074B001BC55C /* Main.storyboard */,
 				ED0422D32963074C001BC55C /* Assets.xcassets */,
 				ED0422D52963074C001BC55C /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				ED0422CF2963074B001BC55C /* ViewController.swift in Sources */,
 				ED0422CB2963074B001BC55C /* AppDelegate.swift in Sources */,
 				ED0422CD2963074B001BC55C /* SceneDelegate.swift in Sources */,
+				ED0422DF2963213C001BC55C /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
