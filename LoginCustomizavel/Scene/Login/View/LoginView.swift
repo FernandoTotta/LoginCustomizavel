@@ -1,14 +1,15 @@
 //
-//  ViewController.swift
+//  Login swift
 //  LoginCustomizavel
 //
-//  Created by Fernando on 02/01/23.
+//  Created by Fernando on 03/01/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginView: UIView {
     
+    var actions: (() -> Void)?
     private lazy var imagemGtr: UIImageView = {
         let image = UIImageView(image: UIImage(named: "NissanGTR"))
         image.layer.cornerRadius = 55
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         let text = UITextField()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.backgroundColor = UIColor(red: 0.9, green: 0.7, blue: 0.5, alpha: 1.0)
+        text.text = nil
         text.placeholder = "Nome ou E-mail"
         text.layer.cornerRadius = 5
         text.font = UIFont(name:"Helvetica", size: 20)
@@ -31,6 +33,7 @@ class ViewController: UIViewController {
     
     private lazy var passWord: UITextField = {
         let text = UITextField()
+        text.text = nil
         text.translatesAutoresizingMaskIntoConstraints = false
         text.backgroundColor = UIColor(red: 0.9, green: 0.7, blue: 0.5, alpha: 1.0)
         text.placeholder = "Senha"
@@ -51,41 +54,44 @@ class ViewController: UIViewController {
     }()
     
     @objc func makeContinue(){
-        let transicao = InformationViewController()
-        transicao.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(transicao, animated: true)
+        actions?()
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.addSubview(imagemGtr)
-        view.addSubview(user)
-        view.addSubview(passWord)
-        view.addSubview(continueButton)
+    func getInformation() -> UserInformation? {
+        if user.text == "" || passWord.text == "" {
+            return nil
+        }
         
+        return UserInformation(userIndifier: user.text!, userPassword: passWord.text!)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSubview(imagemGtr)
+        addSubview(user)
+        addSubview(passWord)
+        addSubview(continueButton)
         NSLayoutConstraint.activate([
-            imagemGtr.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
-            imagemGtr.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imagemGtr.topAnchor.constraint(equalTo:  safeAreaLayoutGuide.topAnchor, constant: 15),
+            imagemGtr.centerXAnchor.constraint(equalTo:  centerXAnchor),
             imagemGtr.widthAnchor.constraint(equalToConstant: 120),
             imagemGtr.heightAnchor.constraint(equalToConstant: 120),
             
             user.topAnchor.constraint(equalTo: imagemGtr.bottomAnchor, constant: 50),
-            user.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
-            user.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
+            user.leadingAnchor.constraint(equalTo:  leadingAnchor, constant: 60),
+            user.trailingAnchor.constraint(equalTo:  trailingAnchor, constant: -60),
             
             passWord.topAnchor.constraint(equalTo: user.bottomAnchor, constant: 30),
-            passWord.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
-            passWord.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
+            passWord.leadingAnchor.constraint(equalTo:  leadingAnchor, constant: 60),
+            passWord.trailingAnchor.constraint(equalTo:  trailingAnchor, constant: -60),
             
-            continueButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            continueButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
-            continueButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -30)
+            continueButton.leadingAnchor.constraint(equalTo:  leadingAnchor, constant: 70),
+            continueButton.trailingAnchor.constraint(equalTo:  trailingAnchor, constant: -70),
+            continueButton.bottomAnchor.constraint(equalTo:  keyboardLayoutGuide.topAnchor, constant: -30)
         ])
     }
-
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
-
-
-
