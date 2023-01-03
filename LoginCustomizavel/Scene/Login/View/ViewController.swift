@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol viewControllerProtocol: AnyObject {
+    func goToHome()
+    func showError()
+}
+
 class ViewController: UIViewController {
     
     

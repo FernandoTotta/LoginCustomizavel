@@ -16,6 +16,8 @@
 		ED0422DF2963213C001BC55C /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0422DE2963213C001BC55C /* InformationViewController.swift */; };
 		EDBED3FA296476C200A73C54 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBED3F9296476C200A73C54 /* LoginView.swift */; };
 		EDBED3FC29647A4200A73C54 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBED3FB29647A4200A73C54 /* UserInformation.swift */; };
+		FCA0ED272964C7E100B144EB /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA0ED262964C7E100B144EB /* LoginPresenter.swift */; };
+		FCA0ED292964CA9E00B144EB /* LoginPresenterConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA0ED282964CA9E00B144EB /* LoginPresenterConcrete.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		ED0422DE2963213C001BC55C /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		EDBED3F9296476C200A73C54 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EDBED3FB29647A4200A73C54 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		FCA0ED262964C7E100B144EB /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		FCA0ED282964CA9E00B144EB /* LoginPresenterConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterConcrete.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +89,7 @@
 		EDBED3F52964766A00A73C54 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				EDBED3F82964767C00A73C54 /* Presenter */,
+				FCA0ED242964C79500B144EB /* Presenter  */,
 				EDBED3F72964767700A73C54 /* View */,
 				EDBED3F62964767200A73C54 /* Model */,
 			);
@@ -109,11 +113,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		EDBED3F82964767C00A73C54 /* Presenter */ = {
+		FCA0ED242964C79500B144EB /* Presenter  */ = {
 			isa = PBXGroup;
 			children = (
+				FCA0ED252964C7AD00B144EB /* Concrete */,
+				FCA0ED262964C7E100B144EB /* LoginPresenter.swift */,
 			);
-			path = Presenter;
+			path = "Presenter ";
+			sourceTree = "<group>";
+		};
+		FCA0ED252964C7AD00B144EB /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				FCA0ED282964CA9E00B144EB /* LoginPresenterConcrete.swift */,
+			);
+			path = Concrete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +203,8 @@
 			files = (
 				ED0422CF2963074B001BC55C /* ViewController.swift in Sources */,
 				EDBED3FC29647A4200A73C54 /* UserInformation.swift in Sources */,
+				FCA0ED272964C7E100B144EB /* LoginPresenter.swift in Sources */,
+				FCA0ED292964CA9E00B144EB /* LoginPresenterConcrete.swift in Sources */,
 				ED0422CB2963074B001BC55C /* AppDelegate.swift in Sources */,
 				ED0422CD2963074B001BC55C /* SceneDelegate.swift in Sources */,
 				EDBED3FA296476C200A73C54 /* LoginView.swift in Sources */,
